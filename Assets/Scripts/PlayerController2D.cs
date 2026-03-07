@@ -28,6 +28,7 @@ public class PlayerController2D : MonoBehaviour
     public float dashGravityMultiplier = 0f;
 
     private Rigidbody2D rb;
+    private Animator animator;
     private Vector2 moveInput;
 
     private bool dashPressed;
@@ -41,6 +42,7 @@ public class PlayerController2D : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         defaultGravityScale = rb.gravityScale;
     }
 
