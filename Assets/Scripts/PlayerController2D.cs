@@ -66,6 +66,9 @@ public class PlayerController2D : MonoBehaviour
     {
         if (dashCooldownLeft > 0f)
             dashCooldownLeft -= Time.deltaTime;
+        
+        if (animator != null)
+            animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
     }
 
     private void FixedUpdate()
@@ -108,6 +111,8 @@ public class PlayerController2D : MonoBehaviour
             StartDash();
 
         dashPressed = false;
+        
+        HandleSpriteFlip();
     }
 
     private void StartDash()
@@ -131,6 +136,16 @@ public class PlayerController2D : MonoBehaviour
     {
         if (groundCheck == null) return false;
         return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+    }
+    
+    private void HandleSpriteFlip()
+    {
+        if (Mathf.Abs(moveInput.x) > 0.01f)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * Mathf.Sign(moveInput.x);
+            transform.localScale = scale;
+        }
     }
 
     private void OnDrawGizmosSelected()
