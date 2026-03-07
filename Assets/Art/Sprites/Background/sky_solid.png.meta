@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 81b820c1b90ff42f4b8c9ea1e5eb4c50
+guid: 73467dbbaa08e4a5b8206552b65859d3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1014294246948626274
-    second: ground_block_0
+      213: -4604875921365189199
+    second: sky_version2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ground_block_0
+      name: sky_version2_0
       rect:
         serializedVersion: 2
-        x: 1089
-        y: 431
-        width: 672
-        height: 14
+        x: 0
+        y: 648
+        width: 1920
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e90a7e0a1c08ce1f0800000000000000
-      internalID: -1014294246948626274
+      spriteID: 1bd37484fb13810c0800000000000000
+      internalID: -4604875921365189199
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ground_block_0: -1014294246948626274
+      sky_version2_0: -4604875921365189199
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
