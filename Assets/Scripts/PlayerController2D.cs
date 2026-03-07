@@ -29,6 +29,7 @@ public class PlayerController2D : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private Vector2 moveInput;
 
     private bool dashPressed;
@@ -43,6 +44,7 @@ public class PlayerController2D : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         defaultGravityScale = rb.gravityScale;
     }
 
@@ -142,9 +144,7 @@ public class PlayerController2D : MonoBehaviour
     {
         if (Mathf.Abs(moveInput.x) > 0.01f)
         {
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x) * Mathf.Sign(moveInput.x);
-            transform.localScale = scale;
+            spriteRenderer.flipX = moveInput.x < 0f;
         }
     }
 
